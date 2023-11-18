@@ -1,0 +1,2 @@
+mean_interarrival,mean_machine_time_1,mean_machine_time_2,max_queue_1,max_queue_2,time_units,std_machine_1
+60.0, 25.0, 59.0, 9223372036854775807,4, "minutes", 7.185832891717325
