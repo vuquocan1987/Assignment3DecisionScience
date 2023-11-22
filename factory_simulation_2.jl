@@ -1,3 +1,4 @@
+using Pkg;
 using DataStructures
 using Distributions
 using StableRNGs
