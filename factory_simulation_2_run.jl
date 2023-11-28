@@ -49,7 +49,7 @@ end
 # file directory and name; * concatenates strings.
 # put a timer on the simulation
 function get_simulation_dir(P::Parameters)
-    return "$(pwd())/data/mean_interarrival_$(P.mean_interarrival)/max_queue_1_$(P.max_queue[1])/max_queue_2_$(P.max_queue[2])/mean_machine_time_1$(P.mean_machine_times[1])/mean_machine_time_2$(P.mean_machine_times[2])"
+    return "$(pwd())/data/mean_interarrival_$(P.mean_interarrival)/max_queue_1_$(P.max_queue[1])/max_queue_2_$(P.max_queue[2])/mean_machine_time_1$(P.mean_machine_times[1])/mean_machine_time_2$(P.mean_machine_times[2])/std_machine_1_$(P.std_machine_1)"
 end
 
 function run_simulations(T::Int64, seed_range::UnitRange{Int64}, parameter_path::String)
@@ -91,7 +91,5 @@ function performance_test(Ts::Vector{Int64})
         @time run_simulations(T, 2:2, "parameters.csv")
     end
 end
-run_simulations(1_000_000, 2:1000, "Parameters.CSV")
+run_simulations(1000000, 2:1000, "Parameters.CSV")
 # generate a list of Ts 10, 20, 40 by code
-
-print("done")
