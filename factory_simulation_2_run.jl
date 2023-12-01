@@ -91,5 +91,5 @@ function performance_test(Ts::Vector{Int64})
         @time run_simulations(T, 2:2, "parameters.csv")
     end
 end
-run_simulations(1000000, 2:1000, "Parameters.CSV")
-# generate a list of Ts 10, 20, 40 by code
+run_simulations(200000, 2:1000, "Parameters.CSV")
+# generate a list of Ts 10, 20, 40 by code0
